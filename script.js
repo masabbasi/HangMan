@@ -52,13 +52,16 @@ if (mistakes === 6) {
     document.getElementById("the-end").querySelector("p").style.display="block";
     document.getElementById("clue").querySelector("p").innerHTML=`Word: ${randomItem}`;
     }
+if (mistakes === 7) {
+    again()
+} 
 }
 
 function updateHangManImage() {
     document.getElementById("hangman-image").querySelector("img").src=`assets/hangman${mistakes}.png`
 }
 
-document.querySelector("button").addEventListener("click",function() {
+function again () {
     randomItem = "";
     clicked = [];
     mistakes = 0;
@@ -70,7 +73,9 @@ document.querySelector("button").addEventListener("click",function() {
     document.getElementById("letters").querySelectorAll("div").forEach(function(item){
         item.classList.remove('used');
     })
-})
+}
+
+document.querySelector("button").addEventListener("click",again)
 
 setRandomItem ();
 setUnderScore ();
