@@ -1,4 +1,4 @@
-const words = ["MASOUD","MILAD","ALI","HOSSEIN","MOHAMMAD","ALIREZA"]
+const words = ["MASOUD","MILAD","MARYAM","ROYA","ALI","HOSSEIN","MOHAMMAD","ALIREZA"]
 
 let randomItem = "";
 let clicked = [];
