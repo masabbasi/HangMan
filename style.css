@@ -81,3 +81,7 @@ Hide it at the beginning.
    font-size: 1rem;
    display: none;
 }
+
+/* @media only screen and (max-width: 500px) {
+
+} */

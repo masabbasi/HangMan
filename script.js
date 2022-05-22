@@ -3,11 +3,10 @@ const words = ["MASOUD","MILAD","ALI","HOSSEIN","MOHAMMAD","ALIREZA"]
 let randomItem = "";
 let clicked = [];
 let mistakes = 0;
-result="";
+let result="";
 
 function setRandomItem () {
     randomItem = words[Math.floor(Math.random()*words.length)];
-    console.log(randomItem);
     document.getElementById("letters").addEventListener ('click',buttonHandler);
     window.addEventListener ('keydown',keyHandler);
 }
@@ -60,14 +59,17 @@ function updateHangManImage() {
 }
 
 document.querySelector("button").addEventListener("click",function() {
+    randomItem = "";
+    clicked = [];
+    mistakes = 0;
+    result="";
     setRandomItem ();
     setUnderScore ();
     document.getElementById("hangman-image").querySelector("img").src=`assets/hangman0.png`;
     document.getElementById("the-end").querySelector("p").style.display="none";
-    document.getElementById("letters").forEach(function(item){
-        item.classList.remove('.used');
+    document.getElementById("letters").querySelectorAll("div").forEach(function(item){
+        item.classList.remove('used');
     })
-    mistakes=0;
 })
 
 setRandomItem ();
