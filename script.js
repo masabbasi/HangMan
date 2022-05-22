@@ -12,13 +12,14 @@ function setRandomItem () {
 }
 
 function letterHandler (letter) {
+    if  ((clicked.indexOf(letter)>=0) ||(randomItem===result)) return
     letter = letter.toUpperCase();
     clicked.indexOf(letter) === -1?clicked.push(letter):null;
     document.getElementById(letter).className="used";
     if (randomItem.indexOf(letter)>=0) {
         setUnderScore ()
         checkWin()
-    } else if (randomItem.indexOf(letter) === -1) {
+    } else if ((randomItem.indexOf(letter) === -1)) {
         mistakes++
         checklose()
         updateHangManImage()
@@ -52,7 +53,7 @@ if (mistakes === 6) {
     document.getElementById("the-end").querySelector("p").style.display="block";
     document.getElementById("clue").querySelector("p").innerHTML=`Word: ${randomItem}`;
     }
-if (mistakes === 7) {
+if (mistakes>6) {
     again()
 } 
 }

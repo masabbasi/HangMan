@@ -4,20 +4,18 @@
    box-sizing: border-box;
 }
 
-html {
-   height: 100%;
-   margin: 0;
-}
 
 body {
-   margin: 0;
-   padding: 2%;
-   height: 100%;
    text-align: center;
-   font-size: 1rem;
+   font-size: 16px;
    font-weight: 600;
    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,88,1) 35%, rgba(0,212,255,1) 100%);
    color:rgb(255, 255, 255);
+}
+
+.container {
+   width: 60%;
+   margin: 0 auto;
 }
 
 button {
@@ -25,7 +23,7 @@ button {
 	color: inherit;
 	border: 1px solid rgb(207, 162, 13);
    border-radius: 1rem;
-	padding: 1rem;
+	padding: 0.8rem;
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
@@ -40,18 +38,20 @@ button:hover {
 
 #letters {
    display: flex;
+   justify-content: center;
+   align-items: center;
    flex-wrap: wrap;
    justify-content: center;
    margin: 1em 0;
 }
 
 #letters div {
-   margin: 5px;
-   padding-top: 0.5em;
+   margin: 3px;
+   padding-top: 1em;
    border: 1px solid gray;
    border-radius: 1rem;
-   width: 2em;
-   height: 2em;
+   width: 3rem;
+   height: 3rem;
    line-height: 0.9;
 }
 
@@ -59,9 +59,13 @@ button:hover {
    background-color: rgba(219, 170, 10, 0.562);
 }
 
+#hangman-image img {
+   max-width: 120px;
+}
+
 #clue p {
    margin-top: 10px;
-   font-size: 3rem;
+   font-size: 2rem;
    letter-spacing: 0.5em;
 }
 
@@ -82,6 +86,26 @@ Hide it at the beginning.
    display: none;
 }
 
-/* @media only screen and (max-width: 500px) {
+@media (max-width: 500px) {
+   #letters div {
+      margin: 4px;
+      border-radius: 6rem;
+      width: 3rem;
+      height: 3rem;
+      font-size: 1rem;
+   }
+   .container {
+      width: 95%;
+      margin: 0 auto;
+   }
 
-} */
+   h1 {
+      font-size: 1rem;
+   }
+
+   button {
+      border: 1px solid rgb(207, 162, 13);
+      border-radius: 1rem;
+      padding: 0.5rem;
+   }
+}
