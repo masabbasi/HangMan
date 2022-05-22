@@ -106,6 +106,7 @@ Hide it at the beginning.
    button {
       border: 1px solid rgb(207, 162, 13);
       border-radius: 1rem;
-      padding: 0.5rem;
+      padding: 0.4rem;
+      font-size: 0.8rem;
    }
 }
