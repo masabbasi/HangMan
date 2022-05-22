@@ -1,0 +1,83 @@
+/* WEB230 Final Project - Hangman Game */
+
+* {
+   box-sizing: border-box;
+}
+
+html {
+   height: 100%;
+   margin: 0;
+}
+
+body {
+   margin: 0;
+   padding: 2%;
+   height: 100%;
+   text-align: center;
+   font-size: 1rem;
+   font-weight: 600;
+   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,88,1) 35%, rgba(0,212,255,1) 100%);
+   color:rgb(255, 255, 255);
+}
+
+button {
+   background: rgba(6, 168, 106, 0.527);
+	color: inherit;
+	border: 1px solid rgb(207, 162, 13);
+   border-radius: 1rem;
+	padding: 1rem;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+   opacity: 0.9;
+}
+
+button:hover {
+   opacity: 0.8;
+   background:rgb(207, 162, 13);
+   border-color:rgba(6, 168, 106, 0.527);
+}
+
+#letters {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin: 1em 0;
+}
+
+#letters div {
+   margin: 5px;
+   padding-top: 0.5em;
+   border: 1px solid gray;
+   border-radius: 1rem;
+   width: 2em;
+   height: 2em;
+   line-height: 0.9;
+}
+
+#letters div:hover {
+   background-color: rgba(219, 170, 10, 0.562);
+}
+
+#clue p {
+   margin-top: 10px;
+   font-size: 3rem;
+   letter-spacing: 0.5em;
+}
+
+/* 
+This class will grey out the letters as they are used. 
+Just add the class "used".
+*/
+#letters div.used {
+   background-color: rgba(117, 5, 5, 0.295);
+}
+
+/* 
+Display the message when the game is over. 
+Hide it at the beginning. 
+*/
+#the-end p {
+   font-size: 1rem;
+   display: none;
+}
