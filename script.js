@@ -7,7 +7,9 @@ let result="";
 
 function setRandomItem () {
     randomItem = words[Math.floor(Math.random()*words.length)];
-    document.getElementById("letters").addEventListener ('click',buttonHandler);
+    [...document.getElementById('letters').children].forEach(function (item) {
+        item.addEventListener ('click',buttonHandler);
+    })
     window.addEventListener ('keydown',keyHandler);
 }
 
