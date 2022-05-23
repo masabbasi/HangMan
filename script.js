@@ -14,7 +14,7 @@ function setRandomItem () {
 }
 
 function letterHandler (letter) {
-    if  ((clicked.indexOf(letter)>=0) ||(randomItem===result)) return
+    if  ((clicked.indexOf(letter)>=0) ||(randomItem===result) ||(mistakes>=6)) return
     letter = letter.toUpperCase();
     clicked.indexOf(letter) === -1?clicked.push(letter):null;
     document.getElementById(letter).className="used";
@@ -55,9 +55,6 @@ if (mistakes === 6) {
     document.getElementById("the-end").querySelector("p").style.display="block";
     document.getElementById("clue").querySelector("p").innerHTML=`Word: ${randomItem}`;
     }
-if (mistakes>6) {
-    again()
-} 
 }
 
 function updateHangManImage() {
